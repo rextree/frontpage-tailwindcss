@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar{
+    @apply bg-opacity-70 bg-gray-700 w-full py-2 md:bg-opacity-0 items-center z-0;
+}
+.menu-btn{
+    @apply block cursor-pointer md:hidden;
+}
+.menu-btn-bar{
+    @apply block w-6 h-1 my-1 mx-auto bg-white duration-300 rounded;
+}
+.menu-btn-toggle .menu-btn-bar:nth-child(even){
+    @apply opacity-0;
+}
+.menu-btn-toggle .menu-btn-bar:nth-child(1){
+    @apply rotate-45 transform translate-y-2;
+}
+.menu-btn-toggle .menu-btn-bar:nth-child(3){
+    @apply -rotate-45 transform -translate-y-2;
+}
+.navlist{
+    @apply relative w-screen left-0 transform duration-300 invisible h-0;
+}
+.menu-btn-toggle > .navlist{
+    @apply translate-x-0 visible h-full duration-300; 
+}
+.nav-item{
+    @apply text-white py-1 md:px-3 md:mx-2 capitalize;
+}

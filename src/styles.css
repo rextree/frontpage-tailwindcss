@@ -10,7 +10,7 @@
     @apply block cursor-pointer md:hidden;
 }
 .menu-btn-bar{
-    @apply block w-6 h-1 my-1 mx-auto bg-white duration-300 rounded;
+    @apply block w-6 h-1 my-1 bg-white duration-300 rounded;
 }
 .menu-btn-toggle .menu-btn-bar:nth-child(even){
     @apply opacity-0;
@@ -22,11 +22,11 @@
     @apply -rotate-45 transform -translate-y-2;
 }
 .navlist{
-    @apply relative w-screen left-0 transform duration-300 invisible h-0;
+    @apply left-0 duration-300 h-0 w-full md:h-full;
 }
-.menu-btn-toggle > .navlist{
-    @apply translate-x-0 visible h-full duration-300; 
+.menu-btn-toggle .navlist{
+    @apply h-full duration-300 w-full; 
 }
 .nav-item{
-    @apply text-white py-1 md:px-3 md:mx-2 capitalize;
+    @apply text-white py-1 md:px-3 md:mx-2 capitalize md:inline;
 }
